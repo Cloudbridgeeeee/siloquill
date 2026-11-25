@@ -1,0 +1,171 @@
+{
+  "name": "SiloQuill",
+  "primary": "Request a pilot",
+  "accent": "#1f2de6",
+  "ink": "#0b0c0e",
+  "bg": "#eef0f3",
+  "surface": "#e2e5ea",
+  "fontLink": "<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&family=JetBrains+Mono:wght@400..500&display=swap\" rel=\"stylesheet\">",
+  "fontDisplay": "\"Manrope\", system-ui, sans-serif",
+  "fontText": "\"Manrope\", system-ui, sans-serif",
+  "client": "Kano grain store",
+  "note": "A fixed store of 8 silos and sheds. Results here come from fixed data in your browser; no AI service is called.",
+  "tabs": {
+    "overview": "Store",
+    "records": "Batches",
+    "queue": "Plans to approve"
+  },
+  "overview": {
+    "title": "Kano grain store",
+    "kpis": [
+      [
+        "Stored now",
+        "3,267 t"
+      ],
+      [
+        "Capacity",
+        "4,500 t"
+      ],
+      [
+        "Silos near full",
+        "2"
+      ],
+      [
+        "Open gaps",
+        "1"
+      ]
+    ],
+    "chart": {
+      "title": "Forecast stock per week against capacity, tonnes",
+      "labels": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5",
+        "W6",
+        "W7",
+        "W8"
+      ],
+      "values": [
+        3267,
+        3510,
+        3820,
+        4230,
+        4410,
+        4100,
+        3700,
+        3400
+      ],
+      "threshold": 4000,
+      "thresholdLabel": "Safe level 4,000 t",
+      "caption": "Weeks above the line need a dispatch before intake."
+    }
+  },
+  "records": {
+    "title": "Batches",
+    "searchHint": "Crop or store",
+    "statusCol": 3,
+    "columns": [
+      "Batch",
+      "Crop",
+      "Location",
+      "Status",
+      "Tonnes",
+      "Received"
+    ],
+    "tones": {
+      "Mismatch": "bad",
+      "Checking": "warn",
+      "Stored": "good"
+    },
+    "rows": [
+      [
+        "Batch 97",
+        "Soybean",
+        "Shed A",
+        "Mismatch",
+        "140",
+        "Nov 12"
+      ],
+      [
+        "Batch 114",
+        "Maize",
+        "Silo 3",
+        "Checking",
+        "320",
+        "Nov 18"
+      ],
+      [
+        "Batch 110",
+        "Maize",
+        "Silo 1",
+        "Stored",
+        "410",
+        "Nov 4"
+      ],
+      [
+        "Batch 88",
+        "Sorghum",
+        "Silo 2",
+        "Stored",
+        "260",
+        "Oct 30"
+      ],
+      [
+        "Batch 105",
+        "Maize",
+        "Silo 3",
+        "Stored",
+        "380",
+        "Nov 1"
+      ],
+      [
+        "Batch 92",
+        "Soybean",
+        "Shed A",
+        "Stored",
+        "248",
+        "Oct 26"
+      ],
+      [
+        "Batch 85",
+        "Sorghum",
+        "Silo 2",
+        "Stored",
+        "352",
+        "Oct 20"
+      ]
+    ]
+  },
+  "queue": {
+    "title": "Plans waiting for a store manager",
+    "lead": "Each plan lists the batches and records behind it. Nothing changes until a manager approves.",
+    "items": [
+      {
+        "id": "kad",
+        "title": "Dispatch 240 t maize to Kaduna on Dec 2",
+        "detail": "Batch 110 from Silo 1, three trucks.",
+        "reason": "Silo 3 fills by Dec 9 at the forecast intake."
+      },
+      {
+        "id": "shed",
+        "title": "Recount Shed A soybean",
+        "detail": "Records 402 t, last count 388 t.",
+        "reason": "Two batch 97 waybills have no matching receipt."
+      },
+      {
+        "id": "zar",
+        "title": "Dispatch 80 t sorghum to Zaria",
+        "detail": "Batch 85 from Silo 2.",
+        "reason": "Order due Dec 12; Silo 2 receives new sorghum Dec 15."
+      },
+      {
+        "id": "mv",
+        "title": "Move batch 114 to Silo 2",
+        "detail": "320 t maize, after the Zaria dispatch.",
+        "reason": "Keeps Silo 3 under 95% through December."
+      }
+    ]
+  }
+}

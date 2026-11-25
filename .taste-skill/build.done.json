@@ -1,0 +1,11 @@
+{
+ "page": "dist/index.html",
+ "dir": "/home/user/siloquill",
+ "kind": "software",
+ "start": "2026-11-25T02:49:56.696Z",
+ "by": "start.mjs",
+ "url": null,
+ "root": "dist",
+ "category": "inventory planning software",
+ "primary": "Request a pilot"
+}
